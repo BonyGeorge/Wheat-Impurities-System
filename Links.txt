@@ -28,3 +28,14 @@ https://www.youtube.com/watch?v=95w4sx_zoB8&list=PLGs0VKk2DiYylFUUMMv9WiL3x3tpsc
 https://www.youtube.com/watch?v=waOk9VtkCqw
 
 ===============================================================
+
+5 - IoT based Emergency Health Care System
+
+desc: earn about emergency health tracking system using GSM and GPS module with Arduino board using heart pulse sensor..
+
+https://www.udemy.com/course/iot-based-emergency-health-care-system/  (Paid)
+
+https://onlinecoursebay.com/iot-based-emergency-health-care-system-udemy-free-download/
+(Free)
+
+=================================================================
