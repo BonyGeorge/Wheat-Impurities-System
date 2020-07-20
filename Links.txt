@@ -39,3 +39,27 @@ https://onlinecoursebay.com/iot-based-emergency-health-care-system-udemy-free-do
 (Free)
 
 =================================================================
+
+6 - Smart Health Care Monitoring System Based on IoT.
+
+desc: This project includes hardware which will measure blood pressure, heart rate, ECG & temperature, and send to Android application & Firebase.
+
+https://create.arduino.cc/projecthub/156471/smart-health-care-monitoring-system-based-on-iot-f559b3
+
+==================================================================
+
+7 - Building an Arduino lie detector test.
+
+desc:  Arduino-based lie detector that can measure the skin’s response to a question.
+
+https://www.electronicsweekly.com/blogs/gadget-master/arduino/building-arduino-lie-detector-test-2017-10/#:~:text=We%20start%20by%20connect%20our,Arduino%20Nano%20R3
+
+===================================================================
+
+8 - Smart Farming System.
+
+desc: Smart farming system uses basic sensors and Iot technologies to provide live information about a particular farm.
+
+https://create.arduino.cc/projecthub/apoorvtripathi1999/smart-farming-system-0aa139
+
+===================================================================
