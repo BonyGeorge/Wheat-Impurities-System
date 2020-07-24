@@ -63,3 +63,27 @@ desc: Smart farming system uses basic sensors and Iot technologies to provide li
 https://create.arduino.cc/projecthub/apoorvtripathi1999/smart-farming-system-0aa139
 
 ===================================================================
+
+9 - Arduino Lie Detector.
+
+desc: Lie detector
+
+https://create.arduino.cc/projecthub/BuildItDR/arduino-lie-detector-a0b914
+
+===================================================================
+
+10 - Arduino Polygraph Machine (Lie Detector).
+
+desc: Getting some information from human body by using simple sensors and Arduino.
+
+https://create.arduino.cc/projecthub/electropeak/arduino-polygraph-machine-lie-detector-7d8b10
+
+====================================================================
+
+11 - Python for Arduino.
+
+desc: python doc for arduin0.
+
+https://realpython.com/arduino-python/
+
+====================================================================
