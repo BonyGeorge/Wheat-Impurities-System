@@ -1,10 +1,19 @@
-# Convolutional Neural Network
+# Plant Recognition.
+
+''' Problem Statement:
+  Recognition of whether the input image of the plant is rice or wheat.
+'''
+''' Authors:
+        * Nour Bahaa
+        * Mai Mahmoud
+        * Ibrahim Fawzy
+        * Abanoub George
+'''
 
 # Importing the libraries
 import tensorflow as tf
 from keras.preprocessing.image import ImageDataGenerator
 
-tf.__version__
 
 # Part 1 - Data Preprocessing
 
@@ -55,14 +64,14 @@ cnn.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
 cnn.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Training the CNN on the Training set and evaluating it on the Test set
-
+'''
 Callback_Func = [
     tf.keras.callbacks.EarlyStopping(patience=2),
     tf.keras.callbacks.ModelCheckpoint(filepath='model.{epoch:02d}-{val_loss:.2f}.h5'),
     tf.keras.callbacks.TensorBoard(log_dir='./logs'),
 ]
-
-cnn.fit(x=training_set, validation_data=test_set, epochs=10, callbacks=Callback_Func)
+'''
+cnn.fit(x=training_set, validation_data=test_set, epochs=25)
 
 # Part 4 - Making a single prediction
 import numpy as np
@@ -74,7 +83,7 @@ test_image = np.expand_dims(test_image, axis=0)
 result = cnn.predict(test_image)
 training_set.class_indices
 if result[0][0] == 1:
-    prediction = 'Wheat plant.'
+    prediction = 'The Model predicts that it is a Wheat plant.'
 else:
-    prediction = 'Rice plant.'
+    prediction = 'The Model predicts that it is a Rice plant.'
 print(prediction)
