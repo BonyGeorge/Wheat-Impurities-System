@@ -1,0 +1,38 @@
+Model Creation: 
+At the beginning we started by a dataset that is going to be trained on a machine to generate a model. When the model is fed enough, it’s going to be ready for the evaluation phase and to generate stats and analysis.
+
+System Overflow: 
+After our model becomes ready now we have to put it on a Raspberry Pi which is attached to a camera module. So our device will be ready to record videos of the field and sends them to the cloud for processing. Then the NN will start to detect the wild oat.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+Dataset: 
+Our dataset, which is considered a challenge for us consists of 2 main classes wheat and wild oat which are non normalized images.
+We already have a dataset for wheat but for wild oat we don’t have so one of our contributions is that we are going to build a dataset for the wild oat.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Input: 
+         Our input will be through incoming frames from the camera module to the IBM Cloud data service.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+Pre-Processing: 
+According to the paper “An Effective Data Normalization Strategy for Academic Datasets using Log Values," , it states that  normalized data will make the NN works better than with normal data.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Main Processing: 
+In the main processing phase is where we train our model with the dataset images so it can detect our incoming frames using TensorFlow and Keras python libraries to use the Mask R-CNN for detection phase.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Output:
+The output of our system will end in one of the two ways either,
+
+Our system doesn't detect a wild oat and continue capturing videos of the filed.
+
+Our system detects a wild oat, then it will send a notification to the mobile app that their is a wild oat and the buzzer, which is connected to the Raspberry Pi will rings to tell him that there is a wild oat here and he should remove it.
+
+
+
+
+
+
+
