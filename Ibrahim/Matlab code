@@ -1,0 +1,16 @@
+>> % Reading Wheat Images.
+>> wheatfolder = 'crop_images\wheat'; 
+>> Images = dir(fullfile(wheatfolder, '*.jpeg'));
+>> for i=1:numel(Images)
+filename = fullfile(wheatfolder, Images(i).name);
+wheatimages{i} = imread(filename);
+end
+>> 
+>> % Reading Rice Images.
+>> ricefolder = 'crop_images\rice'; 
+>> Images2 = dir(fullfile(ricefolder, '*.jpeg'));
+>> for j=1:numel(Images2)
+filename2 = fullfile(ricefolder, Images2(j).name);
+riceimages{j} = imread(filename2);
+end
+>> 
