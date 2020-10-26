@@ -1,0 +1,46 @@
+
+
+what is wild oat?
+why can't people differiniate between wild oat and wheat?
+
+what will happen if wild oat spread?
+
+what are their disadvantages?
+
+how are you planning to get it?
+
+-------------------------------------
+Expected results:
+
+I am gonna talk about expected results for our project 
+First Recognition : When our model is ready and trained ,
+it will be able to classify between the wild oat and wheat
+in early stage.
+DEtection: Our model will be embedded in a Raspberry Pi which
+is connected toa camera module which will be detecting 
+the wild oat using real-time camera recording which is new
+because other similar sysytem they use photographed images.
+
+------------------------------------------------------
+Related Work:
+Impurities in wheat seriously affect wheat quality and food
+security.  To solve the 
+recognition and classification problems associated with 
+impurities in wheat,a recognition method using 
+an improved convolutional neural network 
+In this paper, developed six datasets of named pictures 
+of wheat, to be specific ordinary wheat, bugs, grass, stalks, 
+spikelets, and awns of wheat. The preparation set was made out
+of 25,200 pictures and the approval set comprised of 10,800 
+pictures. Based on network research using Inception_v3, 
+improvement and optimization are
+undertaken before designing the WheNet convolutional neural 
+network, which is intended for automatic recognition of wheat
+images.Experimental results indicate that the WheNet network 
+achieved the most efficient results. It also shows a
+shorter training time, and its recognition accuracies for 
+Top_1 and Top_5 of the test set are 98.59% and 99.98%, 
+respectively. this method can be used to detect impurities
+ in other fields.
+
+ 
