@@ -18,3 +18,9 @@ https://www.researchgate.net/post/is_there_is_any_data-set_available_for_wheat_c
 
 https://gfo.ca/wp-content/uploads/2018/01/WheatDiseases.pdf
 
+https://www.cropscience.bayer.us/learning-center/articles/wheat-rust-diseases#phcontent_6_divAccordion
+
+https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/met.1896
+
+http://bbrc.in/bbrc/an-identification-and-detection-process-for-leaves-disease-of-wheat-using-advance-machine-learning-techniques/
+
