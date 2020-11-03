@@ -1,5 +1,0 @@
-Our goal is straightforward and it's never been done. It's to motorize the area of Wild Oats inside the wheat plants with the most imperative possible accuracy. Along these lines, the rancher can realize where is the Wild Oat's place and eliminate it at the earliest opportunity. In the event that it had been early distinguished, it will diminish hurting the dirt, spreading it's seeds or diminishing sustenance estima
-tion of the wheat. \\
-
-
-Therefore, we start using python to be more accurate; however, we don't have the real data set,which we need to do our own data set.That will need time for the wheat to grow, so we start comparing and detect between wheat and rice by python and compare between our work and get the accuracy and \href{https://www.kaggle.com/ollywelch/crop-image-classification-with-transfer-learning#Model-Training}{His} work and his accuracy Fig [~\ref{fig:ss1} , Page ~\pageref{fig:ss1}] Fig [~\ref{fig:ss2} , Page ~\pageref{fig:ss2}]. So that's why R-CNN was much better that VGGC in its accuracy.
