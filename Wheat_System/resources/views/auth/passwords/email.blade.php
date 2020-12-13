@@ -1,11 +1,13 @@
-@extends('layouts.app')
+<title>Wheat | Reset Password</title>
+<link rel="icon" href=" Logo.png">
+@extends('layouts.navbar')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+                <nav class="mb-1 navbar navbar-expand-lg navbar-dark black" style="color:white">{{ __('Reset Password') }}</nav>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -18,8 +20,8 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address: ') }}</label>
+                            <span style="color: red"> *</span>
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
@@ -33,7 +35,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn" style="background-color: #FFBA01">
                                     {{ __('Send Password Reset Link') }}
                                 </button>
                             </div>

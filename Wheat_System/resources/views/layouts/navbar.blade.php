@@ -12,44 +12,44 @@
   <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 <!--Navbar -->
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark primary-color">
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark black">
     
     @guest
 
     <a class="navbar-brand" href="{{ url('/') }}">
-        <img src="2.png" height="30" alt="Sustaino logo">
+        <img src="Logo.png" height="30" alt="Wheat logo">
       </a>
     @endguest
     
     @Auth
     @if (Auth::user()->type_id == 1)
     <a class="navbar-brand" href="{{ url('/order') }}">
-        <img src="2.png" height="30" alt="Sustaino logo">
+        <img src="Logo.png" height="30" alt="Sustaino logo">
       </a>
 
     @elseif (Auth::user()->type_id == 2)
     <a class="navbar-brand" href="{{ url('/requestedusers') }}">
-        <img src="2.png" height="30" alt="Sustaino logo">
+        <img src="Logo.png" height="30" alt="Sustaino logo">
       </a>
 
     @elseif (Auth::user()->type_id == 3)
     <a class="navbar-brand" href="{{ url('/employees') }}">
-        <img src="2.png" height="30" alt="Sustaino logo">
+        <img src="Logo.png" height="30" alt="Sustaino logo">
       </a>
 
     @elseif (Auth::user()->type_id == 4)
     <a class="navbar-brand" href="{{ url('/products') }}">
-        <img src="2.png" height="30" alt="Sustaino logo">
+        <img src="Logo.png" height="30" alt="Sustaino logo">
       </a>
 
     @elseif (Auth::user()->type_id == 5)
     <a class="navbar-brand" href="{{ url('/employees') }}">
-        <img src="2.png" height="30" alt="Sustaino logo">
+        <img src="Logo.png" height="30" alt="Sustaino logo">
       </a>
 
     @elseif (Auth::user()->type_id == 6)
     <a class="navbar-brand" href="{{ url('/suppliers') }}">
-        <img src="2.png" height="30" alt="Sustaino logo">
+        <img src="Logo.png" height="30" alt="Sustaino logo">
       </a>
     @endif
     
@@ -61,11 +61,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
         <ul class="navbar-nav ml-auto">
-
-          <li class="nav-item">
-            <a  class="nav-link" href="#team">Our Team
-            </a>  
-        </li>
 
         <li class="nav-item">
           <a  class="nav-link" href="#about">Contact Us

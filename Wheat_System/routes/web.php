@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Messages.
+Route::resource('messages', 'MessageController');
+Route::get('/message', 'MessageController@store');
+Route::get('/messages', 'MessageController@index');
+Route::get('/message/{message}', 'MessageController@destroy');

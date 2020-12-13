@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
         <head>
-            <title>Sustaino Company | Welcome.</title>
+            <title>Wheat System| Welcome.</title>
             
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
            <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -11,7 +11,7 @@
            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
             <link rel="stylesheet" href="{{asset('css/style2.css')}}">
             <script src="{{asset('js/validate.js')}}"></script>
-            <link rel="icon" href="{{ URL::asset('3.png') }}" type="image/x-icon"/>
+            <link rel="icon" href="{{ URL::asset('Logo.png') }}" type="image/x-icon"/>
             <script>
               AOS.init();
             </script>
@@ -56,20 +56,20 @@
                 <tr>
                     <th>
                         <div class="paddingview">
-                            <img src="3.png" alt="Sustaino Logo" style="align:center; width: 300px; height:300px;">
+                            <img src="Logo.png" alt="Sustaino Logo" style="align:center; width: 400px; height:300px;">
 
                             <br><br><br><br>
-                            <h1>Welcome To <span style="background: linear-gradient(to right, dodgerblue 0%,greenyellow 100%);
+                            <h1>Welcome To Our <span style="background:  #FFBA01;
                               -webkit-background-clip: text;
-                              -webkit-text-fill-color: transparent;">Sustaino Comapny</span>.</h1>
+                              -webkit-text-fill-color: transparent;">Wheat System</span>.</h1>
                             <br><br>
-                            <h2 style="text-decoration: underline solid #7FFFD4; font-size: 2em;" class="Mission">Our Mission :-</h2>
-                            <p style="font-size: 1.5em;" class="Mpara">Promote and implement environmental change across the region through other sustainable environmentally friendly products and environmental initiatives .</p>
+                            <h2 style="text-decoration: underline solid  #FFBA01; font-size: 2em;" class="Mission">Our Mission :-</h2>
+                            <p style="font-size: 1.5em;" class="Mpara">is to improve the wheat nutrition value and increase it's productivity among all the world .</p>
                             <br><br>
                             <br>
-                            <h2 style="text-decoration: underline solid #7FFFD4; font-size: 2em;" class="Vision">Our Vision :-</h2>
+                            <h2 style="text-decoration: underline solid  #FFBA01; font-size: 2em;" class="Vision">Our Vision :-</h2>
                             <br>
-                            <p style="font-size: 1.5em;" class="Vpara"> Our products  be used as the products instead of petroleum plastics not only as a substitute .</p>
+                            <p style="font-size: 1.5em;" class="Vpara"> Our system would detect all the wheat impurities and monitor the wheather changes to prevent wheat rust .</p>
                         </div>
                     </th>
                     <br><br><br>
@@ -91,13 +91,6 @@
   
           <div class="section-title">
             <h2>Contact Us</h2>
-            <p>We aim to make the world a sustainable place to live in and create a sustainable future.</p>
-          </div>
-  
-          <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.2130195285304!2d31.34932861547272!3d30.059427881876754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e767ba5964d%3A0x53e74f2208e1f6bf!2sAbdallah%20Ibn%20Al%20Taher%2C%20Al%20Manteqah%20as%20Sadesah%2C%20Nasr%20City%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1590020427575!5m2!1sen!2seg" width="1100" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          </div>
-  
           <div class="row mt-5">
   
             <div class="col-lg-4">
@@ -105,19 +98,19 @@
                 <div class="address">
                     <i class="fas fa-search-location"></i>
                   <h4>Location:</h4>
-                  <p>3/86 st.Abdullah Ibn Taher , 11768 Nasr City, Cairo, Egypt.</p>
+                  <p>Cairo, Egypt.</p>
                 </div>
   
                 <div class="email">
                     <i class="fas fa-envelope-open-text"></i>
                   <h4>Email:</h4>
-                  <p> info.sustaino@gmail.com</p>
+                  <p> info.WheatSystem@gmail.com</p>
                 </div>
   
                 <div class="phone">
                     <i class="fas fa-phone"></i>
                   <h4>Call:</h4>
-                  <p> +022 015 5487 1501</p>
+                  <p> +022 012 0282 0504</p>
                 </div>
   
               </div>
