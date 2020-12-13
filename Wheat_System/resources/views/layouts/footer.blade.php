@@ -54,7 +54,7 @@
 
         <!--Image-->
         <div class="view overlay z-depth-1-half">
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(79).jpg" class="img-fluid"
+          <img src="https://images.unsplash.com/photo-1597563146687-ffbb906b394e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1347&q=80" class="img-fluid"
             alt="">
           <a href="">
             <div class="mask rgba-white-light"></div>

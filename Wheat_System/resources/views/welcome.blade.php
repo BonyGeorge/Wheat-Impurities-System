@@ -11,8 +11,7 @@
            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
             <link rel="stylesheet" href="{{asset('css/style2.css')}}">
             <script src="{{asset('js/validate.js')}}"></script>
-            <link rel="icon" href="{{ URL::asset('Logo.png') }}" type="image/x-icon"/>
-            <script>
+           <script>
               AOS.init();
             </script>
             <style>
