@@ -4,15 +4,15 @@ At the beginning we started by a dataset that is going to be trained on a machin
 System Overflow: 
 After our model becomes ready now we have to put it on a Raspberry Pi which is attached to a camera module. So our device will be ready to record videos of the field and sends them to the cloud for processing. Then the NN will start to detect the wild oat.
 
+Also for the weather monitiring system consists of a microcontroller attatched to it rain drop sensor and temp sensor which will send it's data to the cloud also there is the humidty and wind speed data which we are going to get through an api all will be send to the cloud for processing and it will make prediction if there are going to be a fungcide wind or not and will provide analysis to our dashboard in the mobile application.
 -----------------------------------------------------------------------------------------------------------------------------------------
 Dataset: 
-Our dataset, which is considered a challenge for us consists of 2 main classes wheat and wild oat which are non normalized images.
+Our dataset, which is considered a challenge for us consists of 3 main classes and 3 sub-classes healthy wheat, wild oat and wheat rust which are non normalized images.
 We already have a dataset for wheat but for wild oat we don’t have so one of our contributions is that we are going to build a dataset for the wild oat.
-
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 Input: 
-         Our input will be through incoming frames from the camera module to the IBM Cloud data service.
+         Our input will be through incoming frames from the camera module to the Cloud data service.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 Pre-Processing: 
@@ -20,17 +20,15 @@ According to the paper “An Effective Data Normalization Strategy for Academic Da
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Main Processing: 
-In the main processing phase is where we train our model with the dataset images so it can detect our incoming frames using TensorFlow and Keras python libraries to use the Mask R-CNN for detection phase.
+In the main processing phase is where we train our model with the dataset images so it can detect the impurities in the incoming frames using TensorFlow and Keras python libraries to use the Mask R-CNN for detection phase.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Output:
 The output of our system will end in one of the two ways either,
+•Our system doesn’t detect a wild oat/wheat rust and continue capturing videos of the filed.
+•Our system detects a wild oat/wheat rust,  then it will make the buzzer,  which is connected to the Raspberry Pi rings.
 
-Our system doesn't detect a wild oat and continue capturing videos of the filed.
-
-Our system detects a wild oat, then it will send a notification to the mobile app that their is a wild oat and the buzzer, which is connected to the Raspberry Pi will rings to tell him that there is a wild oat here and he should remove it.
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
