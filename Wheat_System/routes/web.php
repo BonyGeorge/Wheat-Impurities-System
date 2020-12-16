@@ -26,3 +26,10 @@ Route::resource('messages', 'MessageController');
 Route::get('/message', 'MessageController@store');
 Route::get('/messages', 'MessageController@index');
 Route::get('/message/{message}', 'MessageController@destroy');
+
+// Profile Page
+/*
+Route::resource('/profile', 'ProfileController');
+Route::get('/profile/{profile}/edit', 'ProfileController@edit');
+Route::get('/profile/{profile}', 'ProfileController@update');
+*/
