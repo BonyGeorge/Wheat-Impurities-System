@@ -15,13 +15,13 @@ class MessageController extends Controller
 
     public function __construct()
     {       
-        
+         return $this->middleware('auth');
     }
 
     public function index()
     {
-       /* $messages = Message::all();
-        return view('pages.messages.viewMsg', compact('messages'));*/
+        $messages = Message::all();
+        return view('pages.messages.viewMsg', compact('messages'));
     }
 
     public function store(MessageRequest $request)
