@@ -37,8 +37,7 @@ class MessageController extends Controller
         
             $Message->save();
 
-            return back()->with('success', 'Message has been sent.');
-   
+            return back()->with('success', 'Message has been sent.'); 
    }
 
     /**
