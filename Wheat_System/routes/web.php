@@ -64,3 +64,6 @@ Route::post('/sendmail', 'MailController@mail');
 Route::get('/requestedusers', 'RequestedUserController@index');
 Route::get('/requestedusers/{user}/edit', 'RequestedUserController@edit');
 Route::get('/requestedusers/{user}', 'RequestedUserController@update');
+
+// Dashboard.
+Route::get('/dashboard', 'DashboardController@index');

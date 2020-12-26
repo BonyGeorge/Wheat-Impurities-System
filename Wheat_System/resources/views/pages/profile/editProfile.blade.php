@@ -2,132 +2,162 @@
 <!DOCTYPE html>
 <html>
 <head>
-
- <meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustaino | Edit Profile.</title>
-    <link rel="icon" href=" 3.png">
-
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <!-- Google Fonts Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="{{asset('css/mdb.min.css')}}">
-  <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="{{asset('css/style.css')}}">
-
-</head>
-<body>
-
- <div class="MiddleDiv">
+    <title>Wheat System | Edit Profile.</title>
+    <link rel="icon" href="{{asset('Logo.png')}}">
 
 
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+* {box-sizing: 
+border-box;}
 
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"  style="background-color: darkturquoise;color:black;">
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
 
-<h4 class="modal-title" id="ModelLabel">Edit Profile</h4>
-</div>
-
-
- <form method="POST" action="/profile/{{Auth::user()->id}}" enctype="multipart/form-data" style="margin: 15px">
-    @csrf
-    @method('PATCH')
-    <center>
-      @if(Auth::user()->filename == NULL)
-
-      <img src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="Image" width="200cm" height="200cm">
-
-      @else
-
-      <img src="{{asset('storage/ProfilePicture/' .Auth::user()->filename)}}"   alt="Image" width="200cm" height="200cm">
-
-      @endif
-    </center> 
-      <br>
-     Name :  <input type="text" class="form-control" name="name" value="{{Auth::user()->name}}" pattern="[A-Za-z- ]{1,32}"><br>
-     Email : <input type="email" class="form-control" name="email" value="{{Auth::user()->email}}"><br>
-     SSN :
-     <div id="u22" class="ax_text_field">
-      <input id="u22_input" class="ssn form-control" type="text" data-label="ssn1" maxlength="11" name="ssn" value="{{Auth::user()->ssn}}">
-     </div><br>
-     Address : <input type="text" class="form-control" name="address" value="{{Auth::user()->address}}" pattern ='[A-Za-z- ]{1,32}'><br>
-     Phone : <input type="tel" class="form-control" name="phone" value="{{Auth::user()->phone}}" pattern=[0-9]{3}-[0-9]{3}-[0-9]{4}><br>
-     Gender : <div class="col-md-15">
-      <select class="form-control" name="isMale" required="required">
-         <option value="1">Male</option>
-         <option value="0">Female</option>
-     </select>
- </div><br>
-
-<br>
-    Image: <span style="color: red"> *</span>
-    <br><input type="file" name="filename" ><br><br>
-
-      <br>                                                                    
-
-      <div class="modal-footer">       
-      <input type="submit" name="Save Edits" value="Save Edits" class = "btn btn-primary">
-      </div>
-
-
-  </form>
-
-</div>
-</div>
-
-</body>
-</html>
-  <!-- jQuery -->
-  <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="{{asset('js/popper.min.js')}}"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="{{asset('js/mdb.min.js')}}"></script>
-
-<script>
-  // SSN validation
-// trap keypress - only allow numbers
-$('input.ssn').on('keypress', function(event){
-    // trap keypress
-    var character = String.fromCharCode(event.which);
-    if(!isInteger(character)){
-        return false;
-    }    
-});
-
-// checks that an input string is an integer, with an optional +/- sign character
-function isInteger (s) {
-    if(s === '-') return true;
-   var isInteger_re     = /^\s*(\+|-)?\d+\s*$/;
-   return String(s).search (isInteger_re) != -1
 }
 
-// format SSN 
-$('input.ssn').on('keyup', function(){
-   var val = this.value.replace(/\D/g, '');
-   var newVal = '';
-    if(val.length > 4) {
-        this.value = val;
-    }
-    if((val.length > 3) && (val.length < 6)) {
-        newVal += val.substr(0, 3) + '-';
-        val = val.substr(3);
-    }
-    if (val.length > 5) {
-        newVal += val.substr(0, 3) + '-';
-        newVal += val.substr(3, 2) + '-';
-        val = val.substr(5);
-    }
-    newVal += val;
-    this.value = newVal;   
-});
+.icon {
+  padding: 10px;
+  background-color:  #B38728;  
+  color: white;
+  min-width: 50px;
+  border-radius: 4px;
+  text-align: center;
+  margin-right: 7px;
+}
 
-</script>
+.input-field {
+  width: 100%;
+  padding: 10px;
+}
+
+
+.btn {
+  background-color: #B38728; 
+  color: white;
+  padding: 10px ;
+  margin-top:30px ;
+  margin-left: 80px;
+  border: none;
+  width: 70%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+}
+body{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+form{
+    background-color: rgb(231, 235, 225);
+    font-size: x-large;
+}
+fieldset{
+    margin: 20px;
+}
+img{
+   margin-left: 150px;
+   width:150px;
+   height:150px;   
+   border-radius: 10000px;   
+}
+
+</style>
+
+
+</head>
+<body style="
+background-image: url({{asset('w.jpeg')}})">
+
+<form action="/action_page.php" style="max-width:500px;margin:auto" >
+    <fieldset>
+        <legend>Profile Page</legend>
+
+
+    <div style="align-self: ">
+    <img src="{{asset('profile.png')}}">
+    </div> 
+
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" id="usrnm" required>
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="email" placeholder="Email" id="email" required>
+  </div>
+  <div class="input-container">
+    <i class="fa fa-phone icon"></i>
+    <input class= "number" type="number" placeholder="Phone number" id="zipcode-number" maxlength="11" min="0" max="99999999999" style="  width: 100%; padding: 10px;" required >
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" id="password"required>
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Confirm Password"  id="ConfirmPassword" required>
+  </div>
+
+  <div class= "input-container">
+      <i class ="fa icon">&#xf224;</i>
+      <select name="gen" id="gen" >
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>      
+      </select>
+      </div>
+
+  <button type="button" class="btn" onclick="return Validate()" > <b>Next</b></button>
+</fieldset>
+</form>
+
+    <script>
+        function Validate() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("ConfirmPassword").value;
+            if (password != confirmPassword) {
+                alert("Passwords do not match, Recheck your password.");
+                return false;
+            }
+            return true;
+        }
+
+        var inputQuantity = [];
+        $(function() {     
+        $(".number").on("keyup", function (e) {
+        var $field = $(this),
+            val=this.value,
+            $thisIndex=parseInt($field.data("idx"),10); 
+        if (this.validity && this.validity.badInput || isNaN(val) || $field.is(":invalid") ) {
+            this.value = inputQuantity[$thisIndex];
+            return;
+        } 
+        if (val.length > Number($field.attr("maxlength"))) {
+          val=val.slice(0, 11);
+          $field.val(val);
+        }
+        inputQuantity[$thisIndex]=val;
+      });      
+    });
+
+
+
+   </script>
+ 
+</body>
+</html>
