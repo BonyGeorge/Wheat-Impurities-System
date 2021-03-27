@@ -14,12 +14,12 @@ from sklearn.svm import SVC
 from sklearn.metrics import plot_confusion_matrix
 
 
-
 # Global Variables.
-DIR = '/home/abanoublamie/Graduation_Project/test_data'
+DIR = '/media/abanoublamie/5E76093A76091485/Grad/Dataset March'
 categories = ['Healthy Wheat', 'Wild Oat']
 data = []
 
+'''
 # Holding the Categories Tree.
 for category in categories:
     path = os.path.join(DIR, category)
@@ -38,7 +38,7 @@ for category in categories:
 pick_in = open('data.pickle', 'wb')
 pickle.dump(data, pick_in)
 pick_in.close()
-
+'''
 
 pick_in = open('data.pickle', 'rb')
 data = pickle.load(pick_in)
@@ -54,7 +54,7 @@ for feature, label in data:
     labels.append(label)
 
 # Spliting the data into training & testing.
-x_train, x_test, y_train, y_test = train_test_split(features, labels, test_size=0.25)
+x_train, x_test, y_train, y_test = train_test_split(features, labels, test_size=0.50)
 
 # Training & Evaluating our model.
 model = SVC(C=1, kernel='poly', gamma='auto')
@@ -63,7 +63,7 @@ model.fit(x_train, y_train)
 # Making a single prediction and printing accuracy.
 prediction = model.predict(x_test)
 accuracy = model.score(x_test, y_test)
-print('The SVM model predicts: ', categories[prediction[0]])
+print('The SVM model predicts: ', categories[prediction[1]])
 print('The SVM model accuracy is: ', round(accuracy * 100, 2), ' %')
 
 # Plot non-normalized confusion matrix.
