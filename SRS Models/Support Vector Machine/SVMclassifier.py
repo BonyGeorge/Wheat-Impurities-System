@@ -63,7 +63,7 @@ model.fit(x_train, y_train)
 # Making a single prediction and printing accuracy.
 prediction = model.predict(x_test)
 accuracy = model.score(x_test, y_test)
-print('The SVM model predicts: ', categories[prediction[1]])
+print('The SVM model predicts: ', categories[prediction[9]])
 print('The SVM model accuracy is: ', round(accuracy * 100, 2), ' %')
 
 # Plot non-normalized confusion matrix.
