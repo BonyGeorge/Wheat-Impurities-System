@@ -7,25 +7,24 @@ import cv2
 import pickle
 import random 
 import matplotlib.pyplot as plt
-import tensorflow as tf
-from keras.preprocessing.image import ImageDataGenerator
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.metrics import plot_confusion_matrix
 
 
-# Global Variables.
-DIR = '/media/abanoublamie/5E76093A76091485/Grad/Dataset March'
-categories = ['Healthy Wheat', 'Wild Oat']
+# Global Variables.         
+DIR = '/media/abanoublamie/5E76093A76091485/ssss/yolov5/wheat_imp'
+categories = ['Healthy Wheat', 'Leaf Rust', 'Stem Rust', 'Wild Oat']
 data = []
 
 '''
+
 # Holding the Categories Tree.
-for category in categories:
+for category in categories:                                                                                                             
     path = os.path.join(DIR, category)
     label = categories.index(category)
 
-    # Holding the images and tranfer them into Greyscale.
+    # Holding the images and tranfer them into Greyscale.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
     for image in os.listdir(path):
         image_path = os.path.join(path, image)
         imgs = cv2.imread(image_path, 3)   
@@ -54,7 +53,7 @@ for feature, label in data:
     labels.append(label)
 
 # Spliting the data into training & testing.
-x_train, x_test, y_train, y_test = train_test_split(features, labels, test_size=0.50)
+x_train, x_test, y_train, y_test = train_test_split(features, labels, test_size=0.25)
 
 # Training & Evaluating our model.
 model = SVC(C=1, kernel='poly', gamma='auto')
@@ -63,7 +62,7 @@ model.fit(x_train, y_train)
 # Making a single prediction and printing accuracy.
 prediction = model.predict(x_test)
 accuracy = model.score(x_test, y_test)
-print('The SVM model predicts: ', categories[prediction[9]])
+print('The SVM model predicts: ', categories[prediction[0]])
 print('The SVM model accuracy is: ', round(accuracy * 100, 2), ' %')
 
 # Plot non-normalized confusion matrix.
