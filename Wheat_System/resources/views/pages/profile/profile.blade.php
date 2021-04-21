@@ -89,11 +89,11 @@
                             </div>
                           </div>
                         </div>
+
 <br>
 <div class="row">
                           <div class="col">
                             <div class="fa fa-id-card">
-
                               <label>SSN: </label>
                              {{Auth::user()->ssn}}
                             </div>
@@ -187,14 +187,12 @@
     left: 75%;
     border-radius: 20px;
     ">Edit Profile</a>
-
 </div>
-<footer id="footer" style=" position: relative;bottom: 47%;">
+<footer id="footer">
   @include('layouts.footer')
 </footer>
 </html>
 @endsection
-
 
   <!-- jQuery -->
   <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>

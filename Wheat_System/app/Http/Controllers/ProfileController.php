@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use App\Profile;
-use Auth;
 use App\pages;
+use Auth;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
@@ -21,7 +21,6 @@ class ProfileController extends Controller
 
 
     public function index(){
-
     	$user = Auth::user()->id;
     	return view('pages.profile.profile',compact('user'));
 
@@ -46,11 +45,11 @@ class ProfileController extends Controller
     {
 
         $image = $request->file('filename');
-        if($image==NULL)
+        if($image == NULL)
         {
        
 
-            $profile::where('id',Auth::user()->id)->update([
+            $profile::where('id', Auth::user()->id)->update([
 
 
 
@@ -76,8 +75,6 @@ class ProfileController extends Controller
 
             $profile::where('id',Auth::user()->id)->update([
 
-
-
                    'name'=> $request->name,
 				   'email'=> $request->email,
 			       'ssn'=> $request->ssn,
@@ -87,8 +84,7 @@ class ProfileController extends Controller
 			       'email'=> $request->email,
 			       'mobile'=> $request->phone,
                    'filename' => $image->getFilename().'.'.$extension,
-
-              
+       
 
             ]);
 }

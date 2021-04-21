@@ -60,7 +60,7 @@ Route::get('/profile/{profile}', 'ProfileController@update');
 Route::get('/sendmail' , 'MailController@index');
 Route::post('/sendmail', 'MailController@mail');
 
-// Requested Users to join company.
+// Requested Users to join system.
 Route::get('/requestedusers', 'RequestedUserController@index');
 Route::get('/requestedusers/{user}/edit', 'RequestedUserController@edit');
 Route::get('/requestedusers/{user}', 'RequestedUserController@update');
