@@ -55,3 +55,17 @@
             </a>
             </li>
   
+
+        <li class="sidebar">
+          <a href="/requestedusers">
+            <i class="fa fa-check"></i>
+            <span>Requested Users</span>
+          </a>
+          </li>
+
+          <li class="sidebar">
+            <a href="{{ url('/messages') }}">
+              <i class="fas fa-inbox"></i>
+              <span>View Messages</span>
+            </a>
+            </li>

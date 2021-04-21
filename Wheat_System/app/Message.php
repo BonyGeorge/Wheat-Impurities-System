@@ -9,7 +9,8 @@ class Message extends Model
     protected $fillable =[
         'name' ,
         'email' ,
-        'subject' ,
+        'subject',
         'message',
+        'replied_by',
     ];
 }

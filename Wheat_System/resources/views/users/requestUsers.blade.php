@@ -2,8 +2,8 @@
 @extends('layouts.sidebar')
 
 @section('content')
-    <title>Sustaino | Requested Users.</title>
-    <link rel="icon" href=" favicon.ico">
+    <title>Wheat System | Requested Users.</title>
+    <link rel="icon" href="favicon.ico">
 </head>
 
 
@@ -28,8 +28,8 @@
       
         <table class="table table-bordered table-responsive-md table-striped text-center">
           <thead>
-      <tr style="background-image: linear-gradient( to right, rgb(0, 206, 209), rgba(127, 255, 0) );">
-           
+            <tr style="background-image: linear-gradient(90deg, rgba(174,174,179,0.258140756302521) 0%, rgba(245,222,9,1) 35%, rgba(255,215,0,1) 100%);">
+                
 
               <th class="text-center"> # </th>
               <th class="text-center ">Person Name</th>
@@ -59,34 +59,18 @@
                       @php
                          if( $user->type_id == 1 )
                          {
-                            echo 'Client.';
+                            echo 'Admin.';
                          } 
                          elseif( $user->type_id == 2 )
                          {
-                            echo 'CEO.'; 
-                         } 
-                         elseif( $user->type_id == 3 )
-                         {
-                            echo 'Finance Head.';
-                         } 
-                         elseif( $user->type_id == 4 )
-                         {
-                            echo 'Finance Member.';
-                         }   
-                         elseif ( $user->type_id == 5)
-                         {
-                            echo 'Supply Chain Head';
-                         }
-                         else 
-                         {
-                            echo 'Supply Chain Member';  
+                            echo 'Client.'; 
                          }
                       @endphp
 
                     </h5>
                 <td>
                     <div class="text-center">
-                      <a href="/requestedusers/{{$user->id}}/edit" class="btn btn-default btn-rounded" role="button" data-target="#elegantModalForm">Accept</a>
+                      <a href="/requestedusers/{{$user->id}}/edit" class="btn btn-warning btn-rounded" role="button" data-target="#elegantModalForm">Accept</a>
                     </div>
                   </span>
               

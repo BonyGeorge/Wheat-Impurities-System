@@ -15,7 +15,7 @@ class MessageController extends Controller
 
     public function __construct()
     {       
-         return $this->middleware('auth');
+        
     }
 
     public function index()

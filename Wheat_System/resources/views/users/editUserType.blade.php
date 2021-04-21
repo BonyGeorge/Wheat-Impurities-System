@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Sustaino | Edit User Type.</title>
-       <link rel="icon" href=" 3.png">
+       <title>Wheat System | Edit User Type.</title>
+       <link rel="icon" href="favicon.ico">
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Google Fonts Roboto -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
@@ -54,9 +54,6 @@
             {!! Form::text('id', null, ['class'=>'form-control' ,'placeholder' => 'UserID', 'readonly']) !!}
             {!! Form::label('Email :') !!} <br>
             {!! Form::email('email', null, ['class'=>'form-control' ,'placeholder' => 'Email','readonly']) !!}
-            {!! Form::label('Salary :') !!}   <span style="color: red"> *</span> <br>
-            {!! Form::number('salary', null, ['class'=>'form-control' ,'placeholder' => '0.00', 'pattern'=> '[0-9]+(\\.[0-9][0-9]?)?']) !!}
-
             <center>
             {!! Form::label('User Type :') !!}   <span style="color: red"> *</span> <br>
             {!! Form::select('selection', \App\User_type::pluck('name','id')) !!}    

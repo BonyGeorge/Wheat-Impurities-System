@@ -174,12 +174,12 @@ class User extends Authenticatable implements MustVerifyEmail
     // Decorator Design Pattern.
     public function scopeAccepted($query)
     {
-        return $query->where('acceptance', 1);
+        return $query->where('accepted', 1);
     }
 
     public function scopeNotAccepted($query)
     {
-        return $query->where('acceptance', 0);
+        return $query->where('accepted', 0);
     }
 
 }

@@ -19,7 +19,7 @@ class RequestedUserController extends Controller
     
     public function __construct()
     {
-        $this->middleware('CEO');
+        
     }
     
     
@@ -32,7 +32,7 @@ class RequestedUserController extends Controller
     
      public function edit(User $user)
     {
-        return view('users.editUserType',compact('user'));
+        return view('users.editUserType', compact('user'));
     }
 
     /**
@@ -48,7 +48,7 @@ class RequestedUserController extends Controller
         $user->type_id = (int) $request->selection;
         $user->id = $request->id;
         $user->salary = $request->salary;
-        $user->acceptance = 1;
+        $user->accepted = 1;
         
         $user->save();
         return redirect('/requestedusers')->with('success', 'User has been Accepted.');
